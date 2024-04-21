@@ -1,0 +1,294 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    /* not in use in this project */
+    --navbarHeight: 190px;
+}
+
+/* Navigation Bar */
+#navBar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+#navBar::before{
+    content: "";
+    background-color: tomato;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.84;
+}
+
+/* Nav Bar :- Logo And Images */
+.logo{
+    margin: 3px 34px;
+}
+
+.logo img{
+    height: 90px;
+    width: 90px;
+    border-radius: 60px;
+    filter: invert(100%);
+    transition: all 1s;
+}
+
+.logo img:hover{
+    transform: rotate(360deg);
+}
+
+/* Nav Bar :- List Styling */
+#navBar ul{
+    display: flex;
+}
+
+#navBar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navBar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+#navBar ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: white;
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+    text-align: center;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 6px;
+    border-radius: 35px;
+    box-shadow: 8px 8px 10px grey;
+}
+
+#services .box img{
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 200px;
+    height: 365px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url(ZH_bgImg1.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    top: 100px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#home h1{
+    text-align: center;
+}
+
+#home p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* Client Seciton */
+#clientsec{
+    height: 300px;
+    position: relative;
+}
+
+#clientsec::before{
+    content: "";
+    position: absolute;
+    background: url('ZH_.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients img{
+    height: 124px;
+    border-radius: 60px;
+    /* animation-name: myAni;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    transition: all; */
+}
+
+/* @keyframes myAni {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} */
+
+#forAni{
+    animation-name: myA1;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    transition: all;
+}
+
+@keyframes myA1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#filter{
+    filter: invert(100%);
+    animation-name: myA2;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+    transition: all;
+}
+
+@keyframes myA2 {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+.clientitem{
+    padding: 34px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: 45px;
+}
+
+#contact::before{
+    content: "";
+    background: url('ZH_Con.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#contbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contbox input, #contbox textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+#contbox form{
+    width: 40%;
+}
+
+#contbox label{
+    font-size: 1.3rem;
+}
+
+.formgroup{
+    padding: 10px;
+}
+
+#sub input{
+    width: 125px;
+    margin: 2px 250px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+#sub input:hover{
+    background-color: green;
+}
+
+/* Footer section */
+footer{
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+}
+
+/* Utility Class */
+.hprimary{
+    font-size: 2.8rem;
+    padding: 12px;
+    text-shadow: 6px 6px 4px grey;;
+}
+
+.hsec{
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 15px;
+    border: 2px solid grey;
+    background-color: brown;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    background-color: green;
+    transform: scale(1.111);
+}
+
+.center{
+    text-align: center;
+}
